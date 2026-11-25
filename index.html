@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Fundamentals</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f1f5f9;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background: #172554;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .card {
+            margin: 25px 0;
+            padding: 20px;
+        }
+
+        pre {
+            background: #0f172a;
+            color: #67e8f9;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        h2 {
+            color: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>JavaScript Fundamentals</h1>
+    <p>Variables | Data Types | Operators | Bootstrap</p>
+
+    <nav>
+        <a href="#variables">Variables</a>
+        <a href="#datatypes">Data Types</a>
+        <a href="#operators">Operators</a>
+        <a href="#bootstrap">Bootstrap</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- 1. VARIABLES -->
+    <section class="card" id="variables">
+        <h2>1. JavaScript Variables</h2>
+
+        <p>Variables are used to store data.</p>
+
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="alert alert-primary">
+                    <b>var</b>
+                    <p>Re-declaration and re-assignment possible.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="alert alert-success">
+                    <b>let</b>
+                    <p>Re-assignment possible, same-scope re-declaration not allowed.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="alert alert-warning">
+                    <b>const</b>
+                    <p>Re-assignment and re-declaration not allowed.</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-primary" onclick="variableExample()">
+            Run Variables Example
+        </button>
+    </section>
+
+
+    <!-- 2. DATA TYPES -->
+    <section class="card" id="datatypes">
+        <h2>2. JavaScript Data Types</h2>
+
+        <p>Data types define the type of value stored in a variable.</p>
+
+        <h5>Primitive Data Types</h5>
+        <p>Number, String, Boolean, Undefined, Null, BigInt, Symbol.</p>
+
+        <h5>Non-Primitive Data Types</h5>
+        <p>Objects, Arrays and Functions.</p>
+
+        <button class="btn btn-success" onclick="datatypeExample()">
+            Run Data Types Example
+        </button>
+    </section>
+
+
+    <!-- 3. OPERATORS -->
+    <section class="card" id="operators">
+        <h2>3. JavaScript Operators</h2>
+
+        <p>Operators perform operations on values and variables.</p>
+
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th>Operator</th>
+                <th>Meaning</th>
+            </tr>
+            <tr><td>+</td><td>Addition</td></tr>
+            <tr><td>-</td><td>Subtraction</td></tr>
+            <tr><td>*</td><td>Multiplication</td></tr>
+            <tr><td>/</td><td>Division</td></tr>
+            <tr><td>%</td><td>Modulus</td></tr>
+            <tr><td>**</td><td>Exponentiation</td></tr>
+            <tr><td>++</td><td>Increment</td></tr>
+            <tr><td>--</td><td>Decrement</td></tr>
+        </table>
+
+        <button class="btn btn-danger" onclick="operatorExample()">
+            Run Operators Example
+        </button>
+    </section>
+
+
+    <!-- 4. BOOTSTRAP -->
+    <section class="card" id="bootstrap">
+        <h2>4. Bootstrap Framework</h2>
+
+        <p>Bootstrap is a CSS framework used to create responsive websites.</p>
+
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="bg-primary text-white p-3 rounded">
+                    Responsive Design
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="bg-success text-white p-3 rounded">
+                    Grid System
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="bg-dark text-white p-3 rounded">
+                    Components
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-success">Success</button>
+        <button class="btn btn-warning">Warning</button>
+
+        <br><br>
+
+        <button class="btn btn-info" onclick="bootstrapExample()">
+            Run Bootstrap Example
+        </button>
+    </section>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+<script>
+
+// ==================================
+// 1. VARIABLES
+// ==================================
+
+function variableExample() {
+
+    
+    console.log("===== VARIABLES =====");
+
+    var a = 10;
+    var a = 100;
+
+    console.log("Var value:", a);
+
+    let b = 20;
+    b = 30;
+
+    console.log("Let value:", b);
+
+    const c = 40;
+
+    console.log("Const value:", c);
+
+    let num1 = 100;
+    let num2 = 200;
+
+    console.log("String Concatenation:", 
+        "The sum is " + (num1 + num2));
+
+    console.log(`String Interpolation: The sum is ${num1 + num2}`);
+}
+
+
+// ==================================
+// 2. DATA TYPES
+// ==================================
+
+function datatypeExample() {
+
+
+    console.log("===== DATA TYPES =====");
+
+    let a = 10;
+    console.log("Number:", a, typeof a);
+
+    a = "Hello";
+    console.log("String:", a, typeof a);
+
+    a = true;
+    console.log("Boolean:", a, typeof a);
+
+    let b;
+    console.log("Undefined:", b, typeof b);
+
+    a = null;
+    console.log("Null:", a, typeof a);
+
+    a = 123456789n;
+    console.log("BigInt:", a, typeof a);
+
+    a = Symbol("id");
+    console.log("Symbol:", a, typeof a);
+
+    let obj = { name: "Praveen" };
+    console.log("Object:", obj, typeof obj);
+
+    let arr = [10, 20, 30];
+    console.log("Array:", arr, typeof arr);
+
+    function hello() {
+        console.log("Hello JavaScript");
+    }
+
+    console.log("Function:", hello, typeof hello);
+}
+
+
+// ==================================
+// 3. OPERATORS
+// ==================================
+
+function operatorExample() {
+
+    
+    console.log("===== OPERATORS =====");
+
+    console.log("Addition:", 100 + 200);
+    console.log("Subtraction:", 100 - 50);
+    console.log("Multiplication:", 10 * 5);
+    console.log("Division:", 100 / 5);
+    console.log("Modulus:", 10 % 3);
+    console.log("Exponentiation:", 2 ** 3);
+
+    console.log("Number + String:", 100 + "hello");
+    console.log("Number + Boolean:", 100 + true);
+    console.log("Number + Null:", 100 + null);
+    console.log("Number + Undefined:", 100 + undefined);
+
+    console.log("String + Number:", "hello" + 100);
+    console.log("Boolean + Boolean:", true + false);
+}
+
+
+// ==================================
+// 4. BOOTSTRAP
+// ==================================
+
+function bootstrapExample() {
+
+  
+    console.log("===== BOOTSTRAP =====");
+
+    console.log("Bootstrap Version:",
+        bootstrap.Tooltip.VERSION);
+
+    console.log("Bootstrap is successfully connected!");
+}
+
+// AUTOMATIC EXECUTION
+
+console.log("WELCOME TO JAVASCRIPT FUNDAMENTALS");
+
+        variableExample();
+
+        datatypeExample();
+
+        operatorExample();  
+
+</script>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
